@@ -6,7 +6,7 @@
 /*   By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/19 12:18:54 by fsitter           #+#    #+#             */
-/*   Updated: 2025/11/27 16:14:17 by fsitter          ###   ########.fr       */
+/*   Updated: 2025/11/27 16:17:40 by fsitter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,9 +45,15 @@ int	fill_mapdata(t_mapdata *data, char *mapfile)
 		return (FALSE);
 	}
 	if (check_map_all(data) == FALSE)
+	{
+		data->map = free_map(data->map);
 		return (FALSE);
+	}
 	if (count_all(data) == FALSE)
+	{
+		data->map = free_map(data->map);
 		return (FALSE);
+	}
 	find_all(data);
 	return (TRUE);
 }
