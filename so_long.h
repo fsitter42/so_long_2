@@ -6,7 +6,7 @@
 /*   By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 19:06:29 by fsitter           #+#    #+#             */
-/*   Updated: 2025/11/27 11:25:21 by fsitter          ###   ########.fr       */
+/*   Updated: 2025/11/27 16:14:22 by fsitter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@
 # define PIXEL 25
 # define IMAGES 5
 # define WINNAME "so_long"
+# define RESOX 1920
+# define RESOY 1080
 
 # define ESC 65307
 
