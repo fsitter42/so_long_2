@@ -6,7 +6,7 @@
 /*   By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/19 12:18:54 by fsitter           #+#    #+#             */
-/*   Updated: 2025/11/27 11:29:24 by fsitter          ###   ########.fr       */
+/*   Updated: 2025/11/27 15:49:53 by fsitter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,15 +51,15 @@ int	fill_count(t_mapdata *data, char **cpy_map, int x, int y)
 	static int	coin;
 	static int	exit;
 
-	if ((y < 0) || (x < 0) || (y > data->map_height_y - 1)
-		|| (x > data->map_width_x - 1) || (cpy_map[y][x] == '1')
-		|| (cpy_map[y][x] == '9'))
+	if ((y < 0) || (x < 0) || (x > data->map_height_y - 1)
+		|| (y > data->map_width_x - 1) || (cpy_map[x][y] == '1')
+		|| (cpy_map[x][y] == '9'))
 		return (0);
-	if (cpy_map[y][x] == COIN)
+	if (cpy_map[x][y] == COIN)
 		coin++;
-	if (cpy_map[y][x] == EXIT)
+	if (cpy_map[x][y] == EXIT)
 		exit++;
-	cpy_map[y][x] = '9';
+	cpy_map[x][y] = '9';
 	fill_count(data, cpy_map, x, y - 1);
 	fill_count(data, cpy_map, x, y + 1);
 	fill_count(data, cpy_map, x + 1, y);
