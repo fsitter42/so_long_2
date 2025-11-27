@@ -6,7 +6,7 @@
 /*   By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/19 12:18:54 by fsitter           #+#    #+#             */
-/*   Updated: 2025/11/27 15:49:53 by fsitter          ###   ########.fr       */
+/*   Updated: 2025/11/27 16:08:55 by fsitter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,12 @@ int	fill_mapdata(t_mapdata *data, char *mapfile)
 	data->map = make_map(mapfile, data);
 	if (!data->map)
 		return (FALSE);
+	if (data->map_width_x > 1920 / PIXEL || data->map_height_y > 1080 / PIXEL)
+	{
+		data->map = free_map(data->map);
+		ft_printf("Error:\nMap to big!\n");
+		return (FALSE);
+	}
 	if (check_map_all(data) == FALSE)
 		return (FALSE);
 	if (count_all(data) == FALSE)

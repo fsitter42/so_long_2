@@ -6,7 +6,7 @@
 /*   By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/18 14:17:34 by fsitter           #+#    #+#             */
-/*   Updated: 2025/11/27 15:55:45 by fsitter          ###   ########.fr       */
+/*   Updated: 2025/11/27 16:04:49 by fsitter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ int	count_all(t_mapdata *data)
 	data->exit_c = count_of(data->map, EXIT);
 	if (data->exit_c != 1)
 	{
-		ft_printf("Error:\Wrong number of exits!\n");
+		ft_printf("Error:\nWrong number of exits!\n");
 		return (FALSE);
 	}
 	data->coin_c = count_of(data->map, COIN);
