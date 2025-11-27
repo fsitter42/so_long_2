@@ -6,7 +6,7 @@
 /*   By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/18 14:17:34 by fsitter           #+#    #+#             */
-/*   Updated: 2025/11/27 11:36:05 by fsitter          ###   ########.fr       */
+/*   Updated: 2025/11/27 15:55:45 by fsitter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,13 +63,13 @@ int	count_all(t_mapdata *data)
 	data->player_c = count_of(data->map, PLAYER);
 	if (data->player_c != 1)
 	{
-		ft_printf("Error:\nNo Player!\n");
+		ft_printf("Error:\nWrong number of players!\n");
 		return (FALSE);
 	}
 	data->exit_c = count_of(data->map, EXIT);
 	if (data->exit_c != 1)
 	{
-		ft_printf("Error:\nNo Exit!\n");
+		ft_printf("Error:\Wrong number of exits!\n");
 		return (FALSE);
 	}
 	data->coin_c = count_of(data->map, COIN);
