@@ -6,7 +6,7 @@
 /*   By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/26 00:37:13 by fsitter           #+#    #+#             */
-/*   Updated: 2025/11/26 15:35:48 by fsitter          ###   ########.fr       */
+/*   Updated: 2025/11/28 15:13:41 by fsitter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,8 +46,8 @@ int	key(int keysym, t_windata *win)
 
 int	my_hook(t_windata win)
 {
-	mlx_hook(win.win_ptr, 2, 1, key, &win);
-	mlx_hook(win.win_ptr, 17, 17, kill_all, &win);
+	mlx_hook(win.win_ptr, 2, 1L << 0, key, &win);
+	mlx_hook(win.win_ptr, 17, 1L << 17, kill_all, &win);
 	return (0);
 }
 
