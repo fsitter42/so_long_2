@@ -18,7 +18,10 @@
 # include <X11/X.h>
 # include <X11/keysym.h>
 # include <fcntl.h>
-# include <mlx.h>
+
+// home 
+# include "minilibx-linux/mlx_int.h"
+# include "minilibx-linux/mlx.h"
 
 // global MACROS
 # define VALIDSIGN "PCE01"

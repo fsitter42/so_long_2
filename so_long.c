@@ -29,5 +29,3 @@ int	main(int argc, char **argv)
 		return (-1);
 	}
 }
-
-// += t_data data; // for window zeile 18

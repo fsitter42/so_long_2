@@ -11,23 +11,25 @@ SOURCE = 	check_and_find.c \
 
 HEADER = so_long.h
 
-CFLAGS += -Wall -Wextra -Werror -g 
+CFLAGS = -Wall -Wextra -Werror -g -Iminilibx-linux
 
-MINIFLAGS += -lmlx -lX11 -lXext -lm
+MINIFLAGS = -Lminilibx-linux -lmlx -lXext -lX11 -lm -lz
 
 OBJECTS = $(SOURCE:.c=.o)
 
 LIBFT = libft/libft.a
+
+MINILIB = minilibx-linux/libmlx.a
 
 CC = cc
 
 RM = rm -f
 
 
-%.o: %.c
+%.o: %.c ${HEADER}
 	${CC} ${CFLAGS} $ -c $< -o $@
-${NAME}: ${OBJECTS} ${HEADER}
-	${CC} ${CFLAGS} ${MINIFLAGS} ${OBJECTS} ${LIBFT} -o ${NAME}
+${NAME}: ${OBJECTS}
+	${CC} ${OBJECTS} libft/libft.a -Lminilibx-linux -lmlx -lXext -lX11 -lm -lz -o ${NAME}
 clean:	
 	${RM} ${OBJECTS}
 fclean:	clean
