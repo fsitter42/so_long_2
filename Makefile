@@ -24,9 +24,9 @@ CC = cc
 RM = rm -f
 
 
-%.o: %.c
+%.o: %.c ${HEADER}
 	${CC} ${CFLAGS} $ -c $< -o $@
-${NAME}: ${OBJECTS} ${HEADER}
+${NAME}: ${OBJECTS}
 	${CC} ${CFLAGS} ${MINIFLAGS} ${OBJECTS} ${LIBFT} -o ${NAME}
 clean:	
 	${RM} ${OBJECTS}

@@ -6,7 +6,7 @@
 /*   By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/22 13:32:49 by fsitter           #+#    #+#             */
-/*   Updated: 2025/11/27 11:44:33 by fsitter          ###   ########.fr       */
+/*   Updated: 2025/12/01 00:16:25 by fsitter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,7 +91,7 @@ void	my_xpm_to_img(t_windata *win)
 	if (!win->img[0].img || !win->img[1].img || !win->img[2].img
 		|| !win->img[3].img || !win->img[4].img)
 	{
-		ft_printf("Error:\nIn creating images!\n");
+		ft_putstr_fd("Error:\nIn creating images!\n", 2);
 		del_dest_cl(win, 1);
 		return ;
 	}

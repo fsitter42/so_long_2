@@ -6,7 +6,7 @@
 /*   By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/19 12:18:54 by fsitter           #+#    #+#             */
-/*   Updated: 2025/11/27 16:17:40 by fsitter          ###   ########.fr       */
+/*   Updated: 2025/12/01 00:12:55 by fsitter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	check_path(t_mapdata *data, char *mapfile)
 			data->playerposition_y) == FALSE)
 	{
 		map_copy = free_map(map_copy);
-		ft_printf("Error:\nInvalid path!\n");
+		ft_putstr_fd("Error:\nInvalid path!\n", 2);
 		return (FALSE);
 	}
 	map_copy = free_map(map_copy);
@@ -41,7 +41,7 @@ int	fill_mapdata(t_mapdata *data, char *mapfile)
 	if (data->map_width_x > RESOX / PIXEL || data->map_height_y > RESOY / PIXEL)
 	{
 		data->map = free_map(data->map);
-		ft_printf("Error:\nMap too big!\n");
+		ft_putstr_fd("Error:\nMap too big!\n", 2);
 		return (FALSE);
 	}
 	if (check_map_all(data) == FALSE)
