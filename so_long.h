@@ -6,7 +6,7 @@
 /*   By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 19:06:29 by fsitter           #+#    #+#             */
-/*   Updated: 2025/11/28 13:38:47 by fsitter          ###   ########.fr       */
+/*   Updated: 2025/12/01 18:14:08 by fsitter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@
 # define EXTENSION ".ber"
 # define PIXEL 25
 # define IMAGES 5
-# define WINNAME "so_long"
+# define WINNAME "NETVRK Minerunner/Metaverse 2D"
 # define RESOX 1920
 # define RESOY 1080
 
