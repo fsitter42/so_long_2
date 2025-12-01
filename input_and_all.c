@@ -6,7 +6,7 @@
 /*   By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/18 14:17:34 by fsitter           #+#    #+#             */
-/*   Updated: 2025/12/01 00:16:23 by fsitter          ###   ########.fr       */
+/*   Updated: 2025/12/01 10:31:00 by fsitter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ int	check_map_all(t_mapdata *data)
 	if (check_borders(data->map, data->map_width_x - 1, data->map_height_y
 			- 1) == FALSE)
 	{
-		ft_putstr_fd"Error:\nBorders!\n", 2);
+		ft_putstr_fd("Error:\nBorders!\n", 2);
 		return (FALSE);
 	}
 	if (check_signs(data->map) == FALSE)
